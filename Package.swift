@@ -7,7 +7,7 @@ let package = Package(
     name: "MapsIndoorsPackage",
     products: [
         .library(
-            name: "MapsIndoorsPackage",
+            name: "MapsIndoors",
             targets: ["MapsIndoors", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore", "GoogleMapsM4B"]),
     ],
     dependencies: [
