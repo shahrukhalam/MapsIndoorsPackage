@@ -12,6 +12,7 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(url: "https://github.com/ZipArchive/ZipArchive.git", exact: "2.5.2")
     ],
     targets: [
         .binaryTarget(
