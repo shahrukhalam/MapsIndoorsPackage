@@ -8,7 +8,8 @@ let package = Package(
     products: [
         .library(
             name: "MapsIndoors",
-            targets: ["MapsIndoors", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore", "GoogleMapsM4B"]),
+            targets: ["MapsIndoors", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore", "GoogleMapsM4B", "JSONModel"]
+        )
     ],
     dependencies: [
     ],
@@ -33,6 +34,10 @@ let package = Package(
         .binaryTarget(
             name: "GoogleMapsM4B",
             path: "Frameworks/GoogleMaps-7.0.0-beta/GoogleMapsM4B.xcframework"
+        ),
+        .target(
+            name: "JSONModel",
+            cSettings: [.headerSearchPath("include")]
         )
     ]
 )
