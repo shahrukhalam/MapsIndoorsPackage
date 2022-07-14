@@ -8,16 +8,17 @@ let package = Package(
     products: [
         .library(
             name: "MapsIndoors",
-            targets: ["MapsIndoors", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore", "GoogleMapsM4B", "JSONModel"]
+//            targets: ["MapsIndoors", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore", "GoogleMapsM4B", "JSONModel"]
+            targets: ["MapsIndoors", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore", "GoogleMapsM4B"]
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/ZipArchive/ZipArchive.git", exact: "2.5.2")
+//        .package(url: "https://github.com/ZipArchive/ZipArchive.git", exact: "2.5.2")
     ],
     targets: [
         .binaryTarget(
             name: "MapsIndoors",
-            url: "https://github.com/MapsIndoors/MapsIndoorsIOS/releases/download/3.40.0/MapsIndoors.xcframework.zip",
+            url: "https://github.com/MapsIndoors/MapsIndoorsIOS/releases/download/3.38.0/MapsIndoors.xcframework.zip",
             checksum: "3557bf9ac63c2942e0b6f0b4ecbc6c1ab549e511e69379875740b57dcf0ff070"
         ),
         .binaryTarget(
@@ -35,10 +36,10 @@ let package = Package(
         .binaryTarget(
             name: "GoogleMapsM4B",
             path: "Frameworks/GoogleMaps-7.0.0-beta/GoogleMapsM4B.xcframework"
-        ),
-        .target(
-            name: "JSONModel",
-            cSettings: [.headerSearchPath("include")]
         )
+//        .target(
+//            name: "JSONModel",
+//            cSettings: [.headerSearchPath("include")]
+//        )
     ]
 )
